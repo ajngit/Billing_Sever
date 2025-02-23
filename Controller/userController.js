@@ -42,7 +42,7 @@ async function AuthenticateUser(req, res) {
         const resp =await userService.AuthenticateUser(user); // Call the service to save the user data
         
         
-        res.status(201).json(resp);
+        res.status(200).json(resp);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
